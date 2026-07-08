@@ -63,26 +63,44 @@
     overflow: hidden;
     page-break-after: avoid;
     page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
   }
 
-  .grid {
+  /* Top: 6 small passport-size photos (couple) */
+  .small-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 2fr 2fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 4mm;
     width: 100%;
-    height: 100%;
+    flex: 2;
+    min-height: 0;
     overflow: hidden;
   }
 
-  .grid > div {
+  /* Bottom: 10 large standard-size photos (family) — 5 columns x 2 rows */
+  .big-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4mm;
+    width: 100%;
+    flex: 5;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .small-grid > div,
+  .big-grid > div {
     min-width: 0;
     min-height: 0;
     overflow: hidden;
     border-radius: 3mm;
   }
 
-  .grid img {
+  .small-grid img,
+  .big-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -108,28 +126,27 @@
       height: 297mm;
       margin: 0;
     }
-    .grid {
-      width: 100%;
-      height: 100%;
-    }
   }
 </style>
 </head>
 <body>
 
   <div class="page">
-    <div class="grid">
-      <!-- Row 1-2: 8 chhoti images (mixed) -->
+
+    <!-- COUPLE PHOTOS - small, passport size (6 images) -->
+    <div class="small-grid">
       <div><img src="./assets/img3.jpeg"></div>
       <div><img src="./assets/img9.jpeg"></div>
       <div><img src="./assets/img1.jpeg"></div>
       <div><img src="./assets/img12.jpeg"></div>
       <div><img src="./assets/img5.jpeg"></div>
       <div><img src="./assets/img15.jpeg"></div>
+    </div>
+
+    <!-- FAMILY PHOTOS - large, standard 4x6 size (10 images) -->
+    <div class="big-grid">
       <div><img src="./assets/img2.jpeg"></div>
       <div><img src="./assets/img7.jpeg"></div>
-
-      <!-- Row 3-4: 8 badi images (mixed) -->
       <div><img src="./assets/img10.jpeg"></div>
       <div><img src="./assets/img4.jpeg"></div>
       <div><img src="./assets/img13.jpeg"></div>
@@ -139,6 +156,7 @@
       <div><img src="./assets/img11.jpeg"></div>
       <div><img src="./assets/img14.jpeg"></div>
     </div>
+
   </div>
 
   <div class="toolbar">
