@@ -68,10 +68,11 @@
     gap: 5mm;
   }
 
-  /* Top: 6 small passport-size photos (couple) */
+  /* Top: 9 small passport-size photos (couple) */
   .small-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 4mm;
     width: 100%;
     flex: 2;
@@ -79,10 +80,10 @@
     overflow: hidden;
   }
 
-  /* Bottom: 10 large standard-size photos (family) — 5 columns x 2 rows */
+  /* Bottom: 7 large standard-size photos (family) — 4 columns x 2 rows */
   .big-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 4mm;
     width: 100%;
@@ -133,28 +134,28 @@
 
   <div class="page">
 
-    <!-- COUPLE PHOTOS - small, passport size (6 images) -->
+    <!-- COUPLE PHOTOS - small, passport size (9 images) -->
     <div class="small-grid">
+      <div><img src="./assets/img2.jpeg"></div>
       <div><img src="./assets/img3.jpeg"></div>
-      <div><img src="./assets/img9.jpeg"></div>
-      <div><img src="./assets/img1.jpeg"></div>
-      <div><img src="./assets/img12.jpeg"></div>
+      <div><img src="./assets/img4.jpeg"></div>
       <div><img src="./assets/img5.jpeg"></div>
+      <div><img src="./assets/img6.jpeg"></div>
+      <div><img src="./assets/img7.jpeg"></div>
+      <div><img src="./assets/img9.jpeg"></div>
       <div><img src="./assets/img15.jpeg"></div>
+      <div><img src="./assets/img16.jpeg"></div>
     </div>
 
-    <!-- FAMILY PHOTOS - large, standard 4x6 size (10 images) -->
+    <!-- FAMILY PHOTOS - large, standard 4x6 size (7 images) -->
     <div class="big-grid">
-      <div><img src="./assets/img2.jpeg"></div>
-      <div><img src="./assets/img7.jpeg"></div>
-      <div><img src="./assets/img10.jpeg"></div>
-      <div><img src="./assets/img4.jpeg"></div>
-      <div><img src="./assets/img13.jpeg"></div>
-      <div><img src="./assets/img6.jpeg"></div>
-      <div><img src="./assets/img16.jpeg"></div>
-      <div><img src="./assets/img8.jpeg"></div>
-      <div><img src="./assets/img11.jpeg"></div>
-      <div><img src="./assets/img14.jpeg"></div>
+      <div><img src="./assets/family1.jpeg"></div>
+      <div><img src="./assets/family2.jpeg"></div>
+      <div><img src="./assets/family3.jpeg"></div>
+      <div><img src="./assets/family4.jpeg"></div>
+      <div><img src="./assets/family5.jpeg"></div>
+      <div><img src="./assets/family6.jpeg"></div>
+      <div><img src="./assets/family7.jpeg"></div>
     </div>
 
   </div>
