@@ -25,7 +25,7 @@
 
   /* Toolbar - hidden on print */
   .toolbar {
-    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
   }
 
@@ -92,51 +92,58 @@
 
   /* Print rules */
   @media print {
-    body {
+    html, body {
       background: white;
       padding: 0;
+      margin: 0;
+      width: 210mm;
+      height: 297mm;
     }
     .toolbar {
       display: none;
     }
     .page {
       box-shadow: none;
-      width: auto;
-      height: auto;
-      padding: 0;
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+    }
+    .grid {
+      width: 100%;
+      height: 100%;
     }
   }
 </style>
 </head>
 <body>
 
+  <div class="page">
+    <div class="grid">
+      <!-- Row 1-2: 8 chhoti images (mixed) -->
+      <div><img src="./assets/img3.jpeg"></div>
+      <div><img src="./assets/img9.jpeg"></div>
+      <div><img src="./assets/img1.jpeg"></div>
+      <div><img src="./assets/img12.jpeg"></div>
+      <div><img src="./assets/img5.jpeg"></div>
+      <div><img src="./assets/img15.jpeg"></div>
+      <div><img src="./assets/img2.jpeg"></div>
+      <div><img src="./assets/img7.jpeg"></div>
+
+      <!-- Row 3-4: 8 badi images (mixed) -->
+      <div><img src="./assets/img10.jpeg"></div>
+      <div><img src="./assets/img4.jpeg"></div>
+      <div><img src="./assets/img13.jpeg"></div>
+      <div><img src="./assets/img6.jpeg"></div>
+      <div><img src="./assets/img16.jpeg"></div>
+      <div><img src="./assets/img8.jpeg"></div>
+      <div><img src="./assets/img11.jpeg"></div>
+      <div><img src="./assets/img14.jpeg"></div>
+    </div>
+  </div>
+
   <div class="toolbar">
     <button class="print-btn" onclick="window.print()">🖨️ Print A4 Page</button>
     <div class="hint">Click karke print dialog kholo — Paper size: A4, Margins: None, Background graphics: ON</div>
-  </div>
-
-  <div class="page">
-    <div class="grid">
-      <!-- 8 chhoti images -->
-      <div><img src="./assets/img1.jpeg"></div>
-      <div><img src="./assets/img2.jpeg"></div>
-      <div><img src="./assets/img3.jpeg"></div>
-      <div><img src="./assets/img4.jpeg"></div>
-      <div><img src="./assets/img5.jpeg"></div>
-      <div><img src="./assets/img6.jpeg"></div>
-      <div><img src="./assets/img7.jpeg"></div>
-      <div><img src="./assets/img8.jpeg"></div>
-
-      <!-- 8 badi images -->
-      <div><img src="./assets/img9.jpeg"></div>
-      <div><img src="./assets/img10.jpeg"></div>
-      <div><img src="./assets/img11.jpeg"></div>
-      <div><img src="./assets/img12.jpeg"></div>
-      <div><img src="./assets/img13.jpeg"></div>
-      <div><img src="./assets/img14.jpeg"></div>
-      <div><img src="./assets/img15.jpeg"></div>
-      <div><img src="./assets/img16.jpeg"></div>
-    </div>
   </div>
 
 </body>
