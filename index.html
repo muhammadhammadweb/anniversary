@@ -60,6 +60,9 @@
     background: white;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     padding: 10mm;
+    overflow: hidden;
+    page-break-after: avoid;
+    page-break-inside: avoid;
   }
 
   .grid {
@@ -69,13 +72,20 @@
     gap: 4mm;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+  }
+
+  .grid > div {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 3mm;
   }
 
   .grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 3mm;
     display: block;
     background: #eee; /* shows if image fails to load */
   }
@@ -108,24 +118,24 @@
   <div class="page">
     <div class="grid">
       <!-- 8 chhoti images -->
-      <img src="./assets/img1.jpeg">
-      <img src="./assets/img2.jpeg">
-      <img src="./assets/img3.jpeg">
-      <img src="./assets/img4.jpeg">
-      <img src="./assets/img5.jpeg">
-      <img src="./assets/img6.jpeg">
-      <img src="./assets/img7.jpeg">
-      <img src="./assets/img8.jpeg">
+      <div><img src="./assets/img1.jpeg"></div>
+      <div><img src="./assets/img2.jpeg"></div>
+      <div><img src="./assets/img3.jpeg"></div>
+      <div><img src="./assets/img4.jpeg"></div>
+      <div><img src="./assets/img5.jpeg"></div>
+      <div><img src="./assets/img6.jpeg"></div>
+      <div><img src="./assets/img7.jpeg"></div>
+      <div><img src="./assets/img8.jpeg"></div>
 
       <!-- 8 badi images -->
-      <img src="./assets/img9.jpeg">
-      <img src="./assets/img10.jpeg">
-      <img src="./assets/img11.jpeg">
-      <img src="./assets/img12.jpeg">
-      <img src="./assets/img13.jpeg">
-      <img src="./assets/img14.jpeg">
-      <img src="./assets/img15.jpeg">
-      <img src="./assets/img16.jpeg">
+      <div><img src="./assets/img9.jpeg"></div>
+      <div><img src="./assets/img10.jpeg"></div>
+      <div><img src="./assets/img11.jpeg"></div>
+      <div><img src="./assets/img12.jpeg"></div>
+      <div><img src="./assets/img13.jpeg"></div>
+      <div><img src="./assets/img14.jpeg"></div>
+      <div><img src="./assets/img15.jpeg"></div>
+      <div><img src="./assets/img16.jpeg"></div>
     </div>
   </div>
 
