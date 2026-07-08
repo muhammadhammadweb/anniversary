@@ -65,39 +65,36 @@
     page-break-inside: avoid;
     display: flex;
     flex-direction: column;
-    gap: 5mm;
+    justify-content: center;
+    gap: 6mm;
   }
 
-  /* Top: 9 small passport-size photos (couple) */
+  /* Top: 9 small passport-size photos (couple) - 5 per row */
   .small-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 4mm;
     width: 100%;
-    flex: 2;
-    min-height: 0;
+  }
+
+  .small-grid > div {
+    width: calc((100% - 16mm) / 5); /* 4 gaps of 4mm between 5 columns */
+    aspect-ratio: 7 / 9; /* passport-style ratio */
     overflow: hidden;
   }
 
-  /* Bottom: 7 large standard-size photos (family) — 4 columns x 2 rows */
+  /* Bottom: 7 large 4x6-ratio photos (family) - 4 per row */
   .big-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 4mm;
     width: 100%;
-    flex: 5;
-    min-height: 0;
-    overflow: hidden;
   }
 
-  .small-grid > div,
   .big-grid > div {
-    min-width: 0;
-    min-height: 0;
+    width: calc((100% - 12mm) / 4); /* 3 gaps of 4mm between 4 columns */
+    aspect-ratio: 4 / 6; /* standard 4x6 ratio */
     overflow: hidden;
-    border-radius: 3mm;
   }
 
   .small-grid img,
